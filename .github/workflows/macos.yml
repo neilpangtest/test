@@ -1,0 +1,10 @@
+name: debugger-action
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Debugger Session
+        uses: neilpang/debugger-action@master
