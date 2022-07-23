@@ -20,7 +20,7 @@ jobs:
           view_top: 1
       - name: Update the readme.md
         run: |
-          git checkout -b master
+          git checkout -b master origin/master
           sed "s/{{release}}/${{ steps.get-latest-release.outputs.tag_name }}/g" .github/tpl/README.tpl.md >README.md
 
       - uses: EndBug/add-and-commit@v9
