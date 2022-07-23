@@ -24,7 +24,8 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          message: "docs(readme): Bump download button version to ${{ steps.get-latest-release.outputs.tag_name }}"
+          message: "Update version to ${{ steps.get-latest-release.outputs.tag_name }}"
+          branch: master
           add: |
             README.md
 
