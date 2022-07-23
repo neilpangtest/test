@@ -1,4 +1,4 @@
-## Welcome to GitHub Release tag: v0.0.5
+## Welcome to GitHub Release tag: v0.0.6
 
 You can use the [editor on GitHub](https://github.com/neilpangtest/test/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
