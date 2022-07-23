@@ -20,13 +20,14 @@ jobs:
           view_top: 1
       - name: Update the readme.md
         run: |
-          git checkout -b master origin/master || git checkout -b master
+          git checkout -b master origin/master || git switch master
           sed "s/{{release}}/${{ steps.get-latest-release.outputs.tag_name }}/g" .github/tpl/README.tpl.md >README.md
 
       - uses: EndBug/add-and-commit@v9
         with:
           message: "Update version to ${{ steps.get-latest-release.outputs.tag_name }}"
           branch: master
+          pull: '--rebase --autostash '
           add: |
             README.md
 
