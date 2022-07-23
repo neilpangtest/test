@@ -26,7 +26,6 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           message: "Update version to ${{ steps.get-latest-release.outputs.tag_name }}"
-          branch: master
           pull: '--rebase --autostash '
           add: |
             README.md
