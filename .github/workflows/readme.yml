@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install replace -g
+      - run: npm install replace --location=global
 
       - name: Update the readme.md
         run: |
