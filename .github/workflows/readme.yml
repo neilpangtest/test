@@ -21,12 +21,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+        run: npm install replace -g
       - name: Update the readme.md
         run: |
-          npm install replace -g
-          
           git switch master || (git fetch --all && git checkout -b master origin/master)
-          
           cat .github/tpl/README.tpl.md >README.md
           replace '{{release}}' '${{ steps.get-latest-release.outputs.tag_name }}' README.md
           replace '{{files}}' "$(ls -lah)" README.md
