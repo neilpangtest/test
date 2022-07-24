@@ -1,6 +1,12 @@
 name: "Update Readme"
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - '*'
+    paths:
+      - '.github/tpl/*'
+      - '.github/workflows/readme.yml'
 
   release:
     types: [ published ]
