@@ -1,0 +1,10 @@
+name: linuxarm
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Debugger Session
+        uses: neilpang/debugger-action@master
